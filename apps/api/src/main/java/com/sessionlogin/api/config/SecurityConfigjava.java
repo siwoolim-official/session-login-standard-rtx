@@ -41,7 +41,7 @@ public class SecurityConfigjava {
         // http://localhost:5173 에서 오는 요청만 허용
         config.setAllowedOrigins(List.of("http://localhost:5173"));
 
-        // "GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS" 메소드만 허용
+        // "GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS" 메서드만 허용
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"));
 
         // 자격증명 허용
