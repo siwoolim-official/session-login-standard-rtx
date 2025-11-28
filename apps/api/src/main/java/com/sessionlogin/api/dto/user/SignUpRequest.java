@@ -1,6 +1,7 @@
-package com.sessionlogin.api.dto;
+package com.sessionlogin.api.dto.user;
 
-import com.sessionlogin.api.domain.User;
+import com.sessionlogin.api.domain.user.Role;
+import com.sessionlogin.api.domain.user.User;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -38,6 +39,9 @@ public class SignUpRequest {
                 .password(encodedPassword) // 암호화된 비밀번호 주입
                 .nickname(this.nickname)
                 .address(this.address)
+                .role(Role.USER)
+                .loginFailCnt(0)
+                .isLocked(false)
                 .build();
     }
 }

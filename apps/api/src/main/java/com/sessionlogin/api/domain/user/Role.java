@@ -1,4 +1,4 @@
-package com.sessionlogin.api.domain;
+package com.sessionlogin.api.domain.user;
 
 
 import lombok.Getter;

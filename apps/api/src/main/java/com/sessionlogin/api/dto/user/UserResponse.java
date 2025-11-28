@@ -1,7 +1,7 @@
-package com.sessionlogin.api.dto;
+package com.sessionlogin.api.dto.user;
 
-import com.sessionlogin.api.domain.Role;
-import com.sessionlogin.api.domain.User;
+import com.sessionlogin.api.domain.user.Role;
+import com.sessionlogin.api.domain.user.User;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
@@ -13,6 +13,8 @@ public class UserResponse {
     private final String nickname;
     private final String address;
     private final Role role;
+    private final int loginFailCnt;
+    private final boolean isLocked;
 
     // Entity -> DTO 변환 정적 메서드
     public static UserResponse from(User user) {
@@ -21,7 +23,9 @@ public class UserResponse {
                 user.getEmail(),
                 user.getNickname(),
                 user.getAddress(),
-                user.getRole()
+                user.getRole(),
+                user.getLoginFailCnt(),
+                user.isLocked()
         );
     }
 }

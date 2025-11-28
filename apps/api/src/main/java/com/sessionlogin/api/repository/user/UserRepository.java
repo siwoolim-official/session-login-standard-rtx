@@ -1,6 +1,6 @@
-package com.sessionlogin.api.repository;
+package com.sessionlogin.api.repository.user;
 
-import com.sessionlogin.api.domain.User;
+import com.sessionlogin.api.domain.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

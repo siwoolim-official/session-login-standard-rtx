@@ -1,4 +1,4 @@
-package com.sessionlogin.api.domain;
+package com.sessionlogin.api.domain.user;
 
 
 import jakarta.persistence.*;
@@ -31,4 +31,11 @@ public class User {
     @Enumerated(EnumType.STRING) // Enum 타입임을 DB에 알림
     @Column(nullable = false)
     private Role role;
+
+    @Column(nullable = false)
+    private int loginFailCnt = 0; // 로그인 실패 회수
+
+    @Column(nullable = false)
+    private boolean isLocked = false; // 계정 잠금 여부 (true = 잠김)
+
 }
